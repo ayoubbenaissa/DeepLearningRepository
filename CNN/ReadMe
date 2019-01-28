@@ -1,0 +1,6 @@
+Implementation of Convolutional Neural Networks
+Here my NN contains 2 layer for "Convolution" and a fully connected network containing one hidden layer
+the data set is the famous cats/dogs dataset from Kaggle
+(https://www.kaggle.com/c/dogs-vs-cats) but I only used 10000 : 8000 for training and the remaining 2000 for testing
+I put the images in a specific dataset folder containing 2 folders (training and testing) which allowed me to use ".flow_from_directory(directory)" method of Keras
+(For more information about Keras visit : https://keras.io/preprocessing/image/
