@@ -1,0 +1,14 @@
+This is the implementation of a bacis Artificial Neural Network using Numpy.
+It is well known that in the hidden layers of the network we use "ReLU" activation function,
+and for the output layer we would rather pick "Sigmoid" activation function.
+
+In each layer "L" we have:
+Z[L] = W[L] * A[L-1] + b[L]
+A[L] = ReLU( Z[L] )
+
+For the last layer (output layer):
+Z[L] = W[L] * A[L-1] + b[L]
+A[L] = Sigmoid( Z[L] )
+
+And from here come the name "forward-propagation" because the vectors Z and A at each layer depend on the values calculated in the previous layer.
+So the Second layer takes the output of the first one to calculate the new vectors, then "propagates" its vector to the next layer.
