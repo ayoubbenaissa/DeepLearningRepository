@@ -33,6 +33,7 @@ classifier.add(Flatten())
 
 #Step4: Full Connection:
 #hidden layer:
+#it is a commun practice to use ReLU function for hidden layers and Sigmoid for output layer 
 classifier.add(Dense(units=128, activation = 'relu'))
 #output layer:
 classifier.add(Dense(units=1, activation='sigmoid'))
@@ -42,7 +43,7 @@ classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accur
 
 #Image Preprocessing:
 from keras.preprocessing.image import ImageDataGenerator
-
+#this will guarantee image augmentation via multiple operation such as zoom, rotation...
 train_datagen = ImageDataGenerator(rescale=1./255,
                                    shear_range=0.2,
                                    zoom_range=0.2,
